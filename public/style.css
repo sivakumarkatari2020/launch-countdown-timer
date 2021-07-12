@@ -1,0 +1,405 @@
+:root{
+    --text1 : #FFFFFF;
+    --text2 : #8486a9;
+    --text3 : hsl(345, 95%, 68%);
+    --plate : hsl(236, 21%, 26%);
+    --plate2 : hsl(235, 16%, 14%);
+    --shadow : hsl(234, 17%, 12%);
+}
+
+/*Layout for desktop*/
+@media screen and (min-width : 450px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Red Hat Text', sans-serif;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        background: var(--plate2);
+    }
+    .top{
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        position: absolute;
+        top: 0%;
+    }
+    .top img{
+        width: 100%;
+    }
+    .bottomSVG{
+        width: 100%;
+        height: 30%;
+        z-index: 99;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0%;
+    }
+    .bottomSVG img{
+        height: 100%;
+    }
+    .time-plate{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .time-plate h3{
+        width: 100%;
+        font-size: 20px;
+        color: var(--text1);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .time-plate .timeline{
+        width: 60%;
+        height: 100px;
+        margin: 20px 0;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        color: var(--text3);
+    }
+    .wrapper{
+        width : 20%;
+        max-width: 120px;
+        height : 100px;
+        background-color : rgba(40,41,51,0.5);
+        border-radius : 10px;
+    }
+    .upper{
+        width : 100%;
+        height : 50%;
+        background-color : var(--plate);
+        border-radius: 0px 0px 10px 10px;
+        position : relative;
+        top : 50%;
+        box-shadow: 0px 10px 0px var(--shadow);
+    }
+    .upper h1{
+        font-size : 80px;
+        position : relative;
+        top : 0%;
+        left : 50%;
+        transform : translate(-40%,-50%);
+    }
+    @keyframes rot{
+        100%{
+            transform : rotateX(180deg);
+        }
+    }
+    .bottom{
+        width : 100%;
+        height : 100%;
+        border-radius : 10px;
+        display : flex;
+        flex-direction : column;
+        position : relative;
+        top : -50%;
+        animation : rot 1s infinite linear;
+        backface-visibility: hidden;
+    }
+    /*#seconds_bottom{
+        animation : rot 1s infinite linear;
+    }*/
+    /*
+    #minutes_bottom{
+        animation : rot 1s 60s infinite linear;
+    }
+    #hours_bottom{
+        animation : rot 1s 3600s infinite linear;
+    }
+    #seconds_bottom{
+        animation : rot 1s infinite linear;
+    }*/
+    .bottom-upper{
+        width : 100%;
+        height : 50%;
+        border-radius : 10px 0 0;
+        background-color : var(--plate2);
+        backface-visibility : hidden;
+        overflow: hidden;
+        box-shadow: 0 5px 0 rgba(132,134,169,0.3);
+    }
+    .bottom-upper-text{
+        font-size : 80px;
+        position : relative;
+        top : 50%;
+        left : 50%;
+        transform : translate(-40%,-25%);
+        backface-visibility: hidden;
+    }
+    .bottom-bottom{
+        width : 100%;
+        height : 50%;
+        background-color : transparent;
+    }
+    .time-plate .tagline{
+        width: 60%;
+        height: auto;
+        color: var(--text2);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .tagline h5{
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .footer{
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        z-index: 999;
+    }
+    .footer .media{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer .media div svg:hover path{
+        cursor: pointer;
+        fill: var(--text3);
+    }
+    .attribution{
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 98%;
+        left: 50%;
+        transform: translate(-50%,0%);
+        color: var(--text2);
+        font-size: 8px;
+        z-index: 9999;
+    }
+    .attribution a{
+        color: var(--text3);
+    }
+}
+
+/*Layout for mobile*/
+@media screen and (max-width : 450px){
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background: var(--plate2);
+}
+.top{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0%;
+}
+.top img{
+    width: 100%;
+}
+.bottomSVG{
+    width: 100%;
+    height: 30%;
+    z-index: 99;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0%;
+}
+.bottomSVG img{
+    height: 100%;
+}
+.time-plate{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    text-align: center;
+}
+.time-plate h3{
+    width: 100%;
+    font-size: 20px;
+    color: var(--text1);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time-plate .timeline{
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text3);
+}
+.wrapper{
+    width: 70px;
+    height : 70px;
+    background-color : rgba(40,41,51,0.5);
+    border-radius : 5px;
+}
+.upper{
+    width : 100%;
+    height : 50%;
+    background-color : var(--plate);
+    border-radius: 0px 0px 5px 5px;
+    position : relative;
+    top : 50%;
+    box-shadow: 0px 5px 0px var(--shadow);
+}
+.upper h1{
+    font-size : 50px;
+    position : relative;
+    top : 0%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+}
+@keyframes rot{
+    100%{
+        transform : rotateX(180deg);
+    }
+}
+.bottom{
+    width : 100%;
+    height : 100%;
+    border-radius : 5px;
+    display : flex;
+    flex-direction : column;
+    position : relative;
+    top : -50%;
+    animation : rot 1s infinite linear;
+    backface-visibility: hidden;
+}
+/*#seconds_bottom{
+    animation : rot 1s infinite linear;
+}*/
+/*
+#minutes_bottom{
+    animation : rot 1s 60s infinite linear;
+}
+#hours_bottom{
+    animation : rot 1s 3600s infinite linear;
+}
+#seconds_bottom{
+    animation : rot 1s infinite linear;
+}*/
+.bottom-upper{
+    width : 100%;
+    height : 50%;
+    border-radius : 5px 0 0;
+    background-color : var(--plate2);
+    backface-visibility : hidden;
+    overflow: hidden;
+    box-shadow: 0 5px 0 rgba(132,134,169,0.3);
+}
+.bottom-upper-text{
+    font-size : 50px;
+    position : relative;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-22%);
+    backface-visibility: hidden;
+}
+.bottom-bottom{
+    width : 100%;
+    height : 50%;
+    background-color : transparent;
+}
+
+.time-plate .tagline{
+    width: 100%;
+    height: auto;
+    color: var(--text2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.tagline h5{
+    width: 25%;
+}
+.footer{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+}
+.footer .media{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer .media div svg:hover path{
+    cursor: pointer;
+    fill: var(--text3);
+}
+.attribution{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    color: var(--text2);
+    z-index: 9999;
+    font-size: 8px;
+}
+.attribution a{
+    color: var(--text3);
+    font-size: 10px;
+}
+
+}
