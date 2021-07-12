@@ -40,11 +40,11 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/sivakumarkatari2020/launch-countdown-timer)
-- Live Site URL: (https://mytodo-list01.netlify.app/)
+- Live Site URL: (https://launch-countdown-timer01.netlify.app/)
 
 ## My process
 
-For implementing this todo-list first I designed it on my figma then I started writing CSS and HTML to it and them I started writing scripts. I used sortable CDN to sort list elements and I wrote many functions for each task.
+For implementing this launch-countdown-timer first I designed it on my figma then I started writing CSS and HTML to it and them I started writing scripts.I wrote many functions for each task.
 
 ### Built with
 
@@ -52,11 +52,10 @@ For implementing this todo-list first I designed it on my figma then I started w
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [Sortable CDN](https://cdnjs.com/libraries/Sortable) - JS library
-
+- JavaScript
 ### Continued development
 
-I got a break a few days because I have a problem with Drag and Drop sorting and later I found a solution to it and that is Sortable CDN.
+I got a break a few days because I have a problem with flip animation and still it behaves bad it is flipping for every second and later I found a solution to it and add to this.
 
 ## Author
 
